@@ -1,0 +1,4 @@
+<%= form_with(model: answer, url: survey_answers_path, id: 'the_form') do |form| %>
+  <%= form.hidden_field :survey_id %>
+  <%= form.hidden_field :body %>
+<% end %>

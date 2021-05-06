@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Surveys</h1>
+
+<% @surveys.each do |survey| %>
+  <h2 class="text-primary"><%= survey.name %></h2>
+
+  <div>
+    <%= link_to 'Run the survey', new_survey_answer_path(survey) %>
+  </div>
+
+  <div class="mt-5">
+    <%= link_to 'Show', survey %>::<%= link_to 'Edit', edit_survey_path(survey) %>::<%= link_to 'Destroy', survey, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+<% end %>
+
